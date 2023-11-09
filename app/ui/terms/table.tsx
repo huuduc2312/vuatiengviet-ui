@@ -8,7 +8,7 @@ export default async function Table({ query }: { query: string }) {
   const noResult = query && terms.length === 0;
 
   return !noResult ? (
-    <div className="grid grid-cols-3 lg:grid-cols-4 w-full gap-1 lg:gap-6">
+    <div className="grid w-full grid-cols-3 gap-1 lg:grid-cols-4 lg:gap-6">
       {terms &&
         terms.map((term: string, idx: number) => (
           <Card term={term} key={idx} />

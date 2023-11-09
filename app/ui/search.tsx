@@ -1,10 +1,7 @@
 "use client";
 
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { searchRhymes } from "../lib/data";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useDebounce, useDebouncedCallback } from "use-debounce";
-import Table from "./terms/table";
+import { useDebouncedCallback } from "use-debounce";
 
 export default function Search({ placeholder }: { placeholder: string }) {
   const searchParams = useSearchParams();
@@ -24,9 +21,9 @@ export default function Search({ placeholder }: { placeholder: string }) {
   }, 300);
 
   return (
-    <div className="flex items-center p-3 gap-6 w-full rounded-xl border-[2px]">
+    <div className="flex w-full items-center gap-6 rounded-xl border-[2px] p-3">
       <input
-        className="grow block w-full focus:outline-none px-5"
+        className="block w-full grow px-5 focus:outline-none"
         placeholder={placeholder}
         onChange={(e) => handleSearch(e.target.value)}
         defaultValue={searchParams.get("query")?.toString()}
@@ -38,8 +35,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6"
-        >
+          className="h-6 w-6">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
