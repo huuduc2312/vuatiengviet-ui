@@ -1,23 +1,19 @@
-"use client";
-
 import Table from "./ui/terms/table";
 import Search from "./ui/search";
-import { redirect, usePathname } from "next/navigation";
-import { SearchType } from "./ui/search-type-select";
+import { redirect } from "next/navigation";
 
 export default function Home({
   searchParams,
 }: {
   searchParams?: { query?: string; type?: string };
 }) {
-  const pathname = usePathname();
   const query = searchParams?.query;
 
   if (!searchParams?.type) {
     const params = new URLSearchParams(searchParams);
-    params.set("type", SearchType.VanXuoi.toString());
+    params.set("type", "van-xuoi");
 
-    redirect(`${pathname}?${params.toString()}`);
+    redirect(`/?${params.toString()}`);
   }
 
   return (
