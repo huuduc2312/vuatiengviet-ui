@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Sidebar from "./ui/sidebar";
 
-const font = Montserrat({
+const font = Inter({
   weight: ["400", "700", "900"],
-  subsets: ["latin"],
+  subsets: ["latin-ext"],
 });
 
 export const metadata: Metadata = {
@@ -19,7 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${font.className} antialiased`}>{children}</body>
+      <body className={`${font.className} antialiased`}>
+        <div className="flex">
+          <Sidebar />
+          <main className="flex-grow">{children}</main>
+        </div>
+      </body>
     </html>
   );
 }

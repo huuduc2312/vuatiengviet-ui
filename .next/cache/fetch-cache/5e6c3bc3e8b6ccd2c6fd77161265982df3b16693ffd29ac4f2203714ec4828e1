@@ -1,1 +1,0 @@
-{"kind":"FETCH","data":{"headers":{"connection":"keep-alive","content-length":"17","content-type":"application/json","date":"Tue, 07 Nov 2023 05:32:59 GMT","server":"nginx/1.18.0 (Ubuntu)"},"body":"eyJzdGF0dXMiOiJmYWlsIn0=","status":200,"url":"http://ec2-52-74-160-204.ap-southeast-1.compute.amazonaws.com/tim_van/ljh"},"revalidate":31536000,"tags":[]}

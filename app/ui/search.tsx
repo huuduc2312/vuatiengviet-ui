@@ -21,9 +21,9 @@ export default function Search({ placeholder }: { placeholder: string }) {
   }, 300);
 
   return (
-    <div className="flex w-full items-center gap-6 rounded-xl border-[2px] p-3">
+    <div className="flex w-full items-center gap-6 rounded-xl border-[2px] bg-white p-3">
       <input
-        className="block w-full grow px-5 focus:outline-none"
+        className="block w-full grow bg-transparent px-5 focus:outline-none"
         placeholder={placeholder}
         onChange={(e) => handleSearch(e.target.value)}
         defaultValue={searchParams.get("query")?.toString()}

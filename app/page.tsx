@@ -1,35 +1,65 @@
-import Image from "next/image";
-import Link from "next/link";
-import SearchBox from "./ui/search";
+"use client";
+
 import Table from "./ui/terms/table";
 import Search from "./ui/search";
-import { useSearchParams } from "next/navigation";
+import { redirect, usePathname } from "next/navigation";
+import { SearchType } from "./ui/search-type-select";
 
 export default function Home({
   searchParams,
 }: {
-  searchParams?: { query?: string };
+  searchParams?: { query?: string; type?: string };
 }) {
-  const query = searchParams?.query || "";
+  const pathname = usePathname();
+  const query = searchParams?.query;
+
+  if (!searchParams?.type) {
+    const params = new URLSearchParams(searchParams);
+    params.set("type", SearchType.VanXuoi.toString());
+
+    redirect(`${pathname}?${params.toString()}`);
+  }
 
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <div className="my-6 flex w-full flex-col items-center gap-6 p-6  lg:w-4/6 lg:p-10 ">
-        <div className="flex flex-col items-center justify-center gap-5">
-          <h1 className="text-center text-2xl font-extrabold md:text-3xl lg:text-5xl">
-            Sáng Tạo Vô Tận: Tìm Câu Theo Vần Với Trí Tuệ Nhân Tạo
-          </h1>
-          <h2 className="text-center text-lg text-slate-600">
-            Dễ dàng tìm kiếm và sáng tạo các câu thơ, lời bài hát và văn bản với
-            sự trợ giúp của trí tuệ nhân tạo.
-          </h2>
-        </div>
+    <div className="h-screen w-full p-12">
+      <div className="grid h-full grid-rows-6 gap-6">
+        {!query && (
+          <div className="row-span-5 flex h-full w-full flex-col items-center justify-center p-6">
+            <div className="flex w-full flex-col justify-start">
+              <h1 className="py-4 text-3xl font-extrabold lg:text-6xl">
+                Vựa Tiếng Việt
+              </h1>
+              <h2 className="text-lg">
+                Công cụ{" "}
+                <span className="text-accent font-bold">Trí Tuệ Nhân Tạo</span>{" "}
+                tìm kiếm câu từ theo vần
+              </h2>
+            </div>
+          </div>
+        )}
 
-        <div className="flex w-full flex-col gap-6 lg:p-6">
+        {query && (
+          <>
+            <div className="bg-accent row-span-2 flex flex-col items-start justify-center gap-6 rounded-3xl p-4 px-6 shadow-lg">
+              <span className="block text-6xl font-bold normal-case text-white underline decoration-dotted">
+                {query}
+              </span>
+              <span className="font-bold text-white">
+                Chúng tôi tìm được{" "}
+                <span className="text-xl underline decoration-dotted">200</span>{" "}
+                kết quả cho bạn!
+              </span>
+            </div>
+            <div className="row-span-3 w-full shadow-xl">
+              <Table query={query} />
+            </div>
+          </>
+        )}
+
+        <div className="flex w-full flex-col">
           <Search placeholder={"Nhập bất kỳ câu từ nào..."} />
-          <Table query={query} />
         </div>
       </div>
-    </main>
+    </div>
   );
 }
