@@ -1,5 +1,5 @@
 import Search from "@/app/ui/terms/search";
-import HeroSection from "@/app/ui/terms/hero";
+import Intro from "@/app/ui/terms/intro";
 import Result from "./result";
 import { SearchType } from "@/app/constants/search-type";
 
@@ -13,7 +13,7 @@ export default function Page({
   return (
     <div className="h-screen w-full p-12">
       <div className="grid h-full grid-rows-6 gap-6">
-        <HeroSection hidden={!!query} />
+        <Intro hidden={!!query} />
 
         {query && <Result searchParams={searchParams} />}
 

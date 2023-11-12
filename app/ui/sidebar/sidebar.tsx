@@ -10,7 +10,7 @@ import Item from "./item";
 export default function Sidebar() {
   return (
     <aside className="flex h-screen flex-col items-center border px-4">
-      <div className="py-[5rem] font-bold">Vựa Tiếng Việt</div>
+      <div className="py-[5rem] text-2xl font-bold">Vựa Tiếng Việt</div>
       <div className="flex flex-col gap-4">
         <Item
           name="Tìm Từ"
@@ -18,7 +18,7 @@ export default function Sidebar() {
           icon={<MagnifyingGlassIcon className="h-6 w-6" />}
         />
         <Item
-          name="Blogs"
+          name="Blog"
           pathname="/blogs"
           icon={<NewspaperIcon className="h-6 w-6" />}
         />
