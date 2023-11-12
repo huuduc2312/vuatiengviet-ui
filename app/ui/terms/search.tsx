@@ -12,6 +12,10 @@ export default function Search({ placeholder }: { placeholder: string }) {
     console.log(`Searching... ${term}`);
 
     const params = new URLSearchParams(searchParams);
+
+    // reset pagination
+    params.delete("page");
+
     if (term) {
       params.set("query", term);
     } else {
@@ -21,7 +25,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
   }, 300);
 
   return (
-    <div className="flex w-full items-center gap-6 rounded-xl border-[2px] bg-white p-3">
+    <div className="flex w-full items-center gap-6 rounded-xl border p-3 shadow">
       <input
         className="block w-full grow bg-transparent px-5 focus:outline-none"
         placeholder={placeholder}

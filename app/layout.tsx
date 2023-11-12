@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Sidebar from "./ui/sidebar";
+import Sidebar from "@/app/ui/sidebar/sidebar";
 
 const font = Inter({
   weight: ["400", "700", "900"],
