@@ -3,10 +3,6 @@ export async function searchVanXuoiRhymes(
   termsReceived: number,
 ): Promise<string[]> {
   try {
-    console.log(
-      "url",
-      `http://127.0.0.1:8501/tim_van/${term}?n_received=${termsReceived}`,
-    );
     // TODO: load URL from env
     const resp = await fetch(
       `http://127.0.0.1:8501/tim_van/${term}?n_received=${termsReceived}`,
