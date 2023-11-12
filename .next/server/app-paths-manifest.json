@@ -1,7 +1,0 @@
-{
-  "/_not-found": "app/_not-found.js",
-  "/blogs/page": "app/blogs/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/grapt/page": "app/grapt/page.js",
-  "/tim-tu/page": "app/tim-tu/page.js"
-}

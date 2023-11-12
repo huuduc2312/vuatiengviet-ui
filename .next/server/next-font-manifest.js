@@ -1,1 +1,0 @@
-self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/ductrinh/Org/AI/vuatiengviet-ui/app/layout":["static/media/d6b16ce4a6175f26-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
