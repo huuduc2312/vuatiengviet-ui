@@ -35,7 +35,7 @@ export default function Pagination({
         <div></div>
       )}
 
-      <div className="flex aspect-square w-[2rem] flex-wrap items-center justify-center rounded-xl border text-center shadow">
+      <div className="flex aspect-square w-[2rem] items-center justify-center rounded-xl border shadow">
         {currentPage}
       </div>
 

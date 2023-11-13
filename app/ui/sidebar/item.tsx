@@ -18,18 +18,14 @@ export default function Item({
 
   return (
     <button
-      className={clsx(
-        "ring-accent flex w-[12rem] items-center justify-items-start gap-4 rounded-md px-4 py-2 font-medium",
-        {
-          "hover:ring-1": currentPathname != pathname,
-          "bg-accent text-white": currentPathname == pathname,
-        },
-      )}
+      className={clsx("flex gap-3 rounded-lg border p-2 shadow", {
+        "bg-blue-strong text-white": currentPathname == pathname,
+      })}
       onClick={() => {
         replace(pathname);
       }}>
       {icon}
-      <div className="p-1 font-semibold">{name}</div>
+      {name}
     </button>
   );
 }

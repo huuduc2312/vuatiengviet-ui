@@ -1,8 +1,14 @@
+import {
+  searchTuLaiRhymes,
+  searchVanDaoRhymes,
+  searchVanXuoiRhymes,
+} from "@/app/lib/data";
+import { Card } from "../ui/terms/card";
 import { SearchType } from "@/app/constants/search-type";
-import List from "@/app/tim-tu/list";
-import Pagination from "@/app/ui/terms/pagination";
+import { notFound } from "next/navigation";
+import { FaceFrownIcon } from "@heroicons/react/24/outline";
 
-export default function Result({
+export default async function Result({
   searchParams,
 }: {
   searchParams?: {
@@ -11,28 +17,42 @@ export default function Result({
     type?: SearchType;
   };
 }) {
+  const termsInPageLimit = 20;
   const query = searchParams?.query || "";
+  const page = Number(searchParams?.page) || 1;
+  const type = searchParams?.type || SearchType.VanXuoi;
 
-  return (
-    <div className="relative row-span-5 flex flex-col items-center justify-between gap-6">
-      <div className="flex w-full flex-col items-start justify-center gap-6 rounded-xl border p-4 px-6 shadow">
-        <span className="block text-6xl font-bold normal-case underline decoration-dotted">
-          {query}
-        </span>
-        <span>
-          Chúng tôi tìm được{" "}
-          <span className="text-xl font-bold decoration-from-font">200</span>{" "}
-          kết quả cho bạn!
-        </span>
-      </div>
+  let terms: string[] = [];
+  const termsReceived = (page - 1) * termsInPageLimit;
 
-      <div className="w-full grow rounded-xl border p-4 shadow">
-        <List searchParams={searchParams} />
-      </div>
+  if (query) {
+    switch (type) {
+      case SearchType.VanXuoi:
+        terms = await searchVanXuoiRhymes(query, termsReceived);
+        break;
+      case SearchType.VanDao:
+        terms = await searchVanDaoRhymes(query, termsReceived);
+        break;
+      case SearchType.NoiLai:
+        terms = await searchTuLaiRhymes(query, termsReceived);
+        break;
+      default:
+        return notFound();
+    }
+  }
 
-      <div className="absolute bottom-0 mb-4 w-[8rem]">
-        <Pagination searchParams={searchParams} />
+  return terms ? (
+    <div className="h-full w-full rounded-lg border p-3 shadow">
+      <div className="flex w-full flex-wrap justify-stretch gap-4">
+        {terms.map((term, idx) => {
+          return <Card key={idx} term={term} />;
+        })}
       </div>
+    </div>
+  ) : (
+    <div className="flex gap-2">
+      <span>Không có kết quả nào</span>
+      <FaceFrownIcon className="h-6 w-6" />
     </div>
   );
 }

@@ -1,7 +1,9 @@
 import Search from "@/app/ui/terms/search";
-import Intro from "@/app/ui/terms/intro";
-import Result from "./result";
 import { SearchType } from "@/app/constants/search-type";
+import TypeSelect from "@/app/ui/terms/type-select";
+import Pagination from "@/app/ui/terms/pagination";
+import Result from "./result";
+import { LightBulbIcon } from "@heroicons/react/24/outline";
 
 export default function Page({
   searchParams,
@@ -11,16 +13,24 @@ export default function Page({
   const query = searchParams?.query;
 
   return (
-    <div className="h-screen w-full p-12">
-      <div className="grid h-full grid-rows-6 gap-6">
-        <Intro hidden={!!query} />
-
-        {query && <Result searchParams={searchParams} />}
-
-        <div className="flex w-full flex-col">
-          <Search placeholder={"Nhập bất kỳ câu từ nào..."} />
-        </div>
+    <div className="flex h-full w-full flex-col items-center justify-between gap-4">
+      <div className="flex w-full flex-col gap-4">
+        <TypeSelect searchParams={searchParams} />
+        <Search placeholder={"Nhập bất kỳ câu từ nào..."} />
       </div>
+
+      {query ? (
+        <>
+          <Result searchParams={searchParams} />
+          <Pagination searchParams={searchParams} />
+        </>
+      ) : (
+        <div className="flex h-full flex-col items-center justify-center gap-2 italic">
+          <LightBulbIcon className="h-10 w-10" />
+          <span>{'"Làm thơ thì phải có vần'}</span>
+          <span>{'Nếu mà không có thì thôi cũng được..."'}</span>
+        </div>
+      )}
     </div>
   );
 }

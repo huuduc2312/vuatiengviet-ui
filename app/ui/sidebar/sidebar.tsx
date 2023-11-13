@@ -9,9 +9,8 @@ import Item from "./item";
 
 export default function Sidebar() {
   return (
-    <aside className="flex h-screen flex-col items-center border px-4">
-      <div className="py-[5rem] text-2xl font-bold">Vựa Tiếng Việt</div>
-      <div className="flex flex-col gap-4">
+    <aside className="hidden lg:block">
+      <div className="flex h-full w-[12rem] flex-col gap-3 rounded-lg border px-3 pt-6 shadow">
         <Item
           name="Tìm Từ"
           pathname="/tim-tu"
