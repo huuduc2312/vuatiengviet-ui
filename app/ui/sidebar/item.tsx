@@ -18,7 +18,7 @@ export default function Item({
 
   return (
     <button
-      className={clsx("flex gap-3 rounded-lg border p-2 shadow", {
+      className={clsx("flex gap-3 rounded-lg border p-2 font-medium shadow", {
         "bg-blue-strong text-white": currentPathname == pathname,
       })}
       onClick={() => {

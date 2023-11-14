@@ -26,21 +26,21 @@ export default function TypeSelect({
   return (
     <div className="grid w-full grid-flow-col justify-stretch gap-2 rounded-lg border p-1 shadow">
       <button
-        className={clsx("rounded-md p-1", {
+        className={clsx("rounded-md p-1 font-medium", {
           "bg-blue-strong text-white": currentType == SearchType.VanXuoi,
         })}
         onClick={handleChangeType(SearchType.VanXuoi)}>
         Vần Xuôi
       </button>
       <button
-        className={clsx("rounded-md p-1", {
+        className={clsx("rounded-md p-1 font-medium", {
           "bg-blue-strong text-white": currentType == SearchType.VanDao,
         })}
         onClick={handleChangeType(SearchType.VanDao)}>
         Vần Đảo
       </button>
       <button
-        className={clsx("rounded-md p-1", {
+        className={clsx("rounded-md p-1 font-medium", {
           "bg-blue-strong text-white": currentType == SearchType.NoiLai,
         })}
         onClick={handleChangeType(SearchType.NoiLai)}>
