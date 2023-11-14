@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import {
-  Raleway,
-} from "next/font/google";
+import { Raleway } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/app/ui/sidebar/sidebar";
 import Hero from "./ui/hero";

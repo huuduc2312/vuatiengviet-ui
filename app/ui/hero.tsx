@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
-    <div>
-      <h1 className="from-blue-strong to-blue-light bg-gradient-to-r bg-clip-text text-center text-3xl font-extrabold tracking-tighter text-transparent drop-shadow lg:text-6xl">
+    <div className="flex w-full flex-col items-center">
+      <h1 className="from-blue-strong to-blue-light bg-gradient-to-r bg-clip-text py-4 text-center text-3xl font-extrabold tracking-tighter text-transparent drop-shadow lg:min-w-[615px] lg:max-w-[750px] lg:text-6xl">
         Tìm từ theo vần dễ dàng với Trí Tuệ Nhân Tạo
       </h1>
       <p className="mx-auto mt-3 text-center font-medium">
