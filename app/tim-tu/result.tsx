@@ -52,7 +52,7 @@ export default async function Result({
       return notFound();
   }
 
-  return terms ? result(defaultResult(terms)) : noResult;
+  return terms.length ? result(defaultResult(terms)) : noResult;
 }
 
 function defaultResult(terms: string[]) {
