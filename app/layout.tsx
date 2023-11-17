@@ -23,12 +23,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="vi">
-      <Script
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4305181017232136"
-        crossOrigin="anonymous"
-        strategy="afterInteractive"
-      />
-
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4305181017232136"
+          crossorigin="anonymous"></script>
+      </head>
       <body className={`${font.className} antialiased`}>
         <div className="flex min-h-screen justify-center p-4">
           <div className="flex flex-col items-center justify-center lg:w-3/5">
