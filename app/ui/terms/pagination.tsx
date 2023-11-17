@@ -5,8 +5,10 @@ import { usePathname, useRouter } from "next/navigation";
 
 export default function Pagination({
   searchParams,
+  stop,
 }: {
   searchParams?: { page?: string };
+  stop: boolean;
 }) {
   const currentPage = Number(searchParams?.page) || 1;
   const pathname = usePathname();
@@ -32,18 +34,20 @@ export default function Pagination({
           <ChevronLeftIcon />
         </button>
       ) : (
-        <div></div>
+        <div />
       )}
 
       <div className="flex aspect-square w-[2rem] items-center justify-center rounded-xl border shadow">
         {currentPage}
       </div>
 
-      <button
-        className="flex aspect-square w-[2rem] items-center justify-center rounded-xl hover:border hover:shadow"
-        onClick={() => redirectToPage(currentPage + 1)}>
-        <ChevronRightIcon />
-      </button>
+      {!stop && (
+        <button
+          className="flex aspect-square w-[2rem] items-center justify-center rounded-xl hover:border hover:shadow"
+          onClick={() => redirectToPage(currentPage + 1)}>
+          <ChevronRightIcon />
+        </button>
+      )}
     </div>
   );
 }

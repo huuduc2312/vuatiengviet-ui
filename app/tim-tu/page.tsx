@@ -1,9 +1,8 @@
 import Search from "@/app/ui/terms/search";
 import { SearchType } from "@/app/constants/search-type";
 import TypeSelect from "@/app/ui/terms/type-select";
-import Pagination from "@/app/ui/terms/pagination";
 import Result from "./result";
-import { LightBulbIcon } from "@heroicons/react/24/outline";
+import Placeholder from "./placeholder";
 
 export default function Page({
   searchParams,
@@ -19,18 +18,7 @@ export default function Page({
         <Search placeholder={"Nhập bất kỳ câu từ nào..."} />
       </div>
 
-      {query ? (
-        <>
-          <Result searchParams={searchParams} />
-          <Pagination searchParams={searchParams} />
-        </>
-      ) : (
-        <div className="flex h-full flex-col items-center justify-center gap-2 italic">
-          <LightBulbIcon className="h-10 w-10" />
-          <span>{'"Làm thơ thì phải có vần'}</span>
-          <span>{'Nếu mà không có thì thôi cũng được..."'}</span>
-        </div>
-      )}
+      {query ? <Result searchParams={searchParams} /> : <Placeholder />}
     </div>
   );
 }

@@ -1,11 +1,11 @@
 export async function searchVanXuoiRhymes(
   term: string,
-  termsReceived: number,
+  receivedCount: number,
 ): Promise<string[]> {
   try {
     // TODO: load URL from env
     const resp = await fetch(
-      `http://127.0.0.1:8501/tim_van/${term}?n_received=${termsReceived}`,
+      `http://127.0.0.1:8501/tim_van/${term}?n_received=${receivedCount}`,
     );
 
     const { status, van }: { status: string; van: string } = await resp.json();
@@ -20,12 +20,12 @@ export async function searchVanXuoiRhymes(
 
 export async function searchVanDaoRhymes(
   words: string,
-  termsReceived: number,
+  receivedCount: number,
 ): Promise<string[]> {
   try {
     // TODO: load URL from env
     const resp = await fetch(
-      `http://127.0.0.1:8501/tim_van_dao/${words}?n_received=${termsReceived}`,
+      `http://127.0.0.1:8501/tim_van_dao/${words}?n_received=${receivedCount}`,
     );
 
     const { status, van }: { status: string; van: string } = await resp.json();
@@ -40,20 +40,27 @@ export async function searchVanDaoRhymes(
 
 export async function searchTuLaiRhymes(
   words: string,
-  termsReceived: number,
+  receivedCount: number,
 ): Promise<[string[], string[]]> {
   try {
     // TODO: load URL from env
     const resp = await fetch(
-      `http://127.0.0.1:8501/tim_tu_lai/${words}?n_received=${termsReceived}`,
+      `http://127.0.0.1:8501/tim_tu_lai/${words}?n_received=${receivedCount}`,
     );
+
+    if (resp.status != 200) {
+      return [[], []];
+    }
 
     const {
       status,
       tieu_chuan,
       tu_do,
-    }: { status: string; tieu_chuan: string; tu_do: string } =
-      await resp.json();
+    }: {
+      status: string;
+      tieu_chuan?: string;
+      tu_do?: string;
+    } = await resp.json();
 
     const standardTerms = tieu_chuan?.split("\n") || [];
     const freeStyleTerms = tu_do?.split("\n") || [];
