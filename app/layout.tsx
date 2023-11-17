@@ -4,6 +4,7 @@ import "./globals.css";
 import Sidebar from "@/app/ui/sidebar/sidebar";
 import Hero from "./ui/hero";
 import Image from "next/image";
+import Script from "next/script";
 
 const font = Raleway({
   weight: [],
@@ -22,6 +23,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="vi">
+      <Script
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4305181017232136"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
+
       <body className={`${font.className} antialiased`}>
         <div className="flex min-h-screen justify-center p-4">
           <div className="flex flex-col items-center justify-center lg:w-3/5">
