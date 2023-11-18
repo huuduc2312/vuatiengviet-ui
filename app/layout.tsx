@@ -4,6 +4,7 @@ import "./globals.css";
 import Sidebar from "@/app/ui/sidebar/sidebar";
 import Hero from "./ui/hero";
 import Image from "next/image";
+import Script from "next/script";
 
 const font = Raleway({
   weight: [],
@@ -38,10 +39,20 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <head>
-        <script
-          async
+        <Script
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4305181017232136"
-          crossOrigin="anonymous"></script>
+          crossOrigin="anonymous"
+        />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-NK9CVND59D" />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-NK9CVND59D');
+          `}
+        </Script>
       </head>
       <body className={`${font.className} antialiased`}>
         <div className="flex min-h-screen justify-center p-4">
