@@ -27,11 +27,11 @@ export default function Pagination({
     <div className="grid grid-cols-3 items-center justify-stretch gap-2">
       {currentPage > 1 ? (
         <button
-          className="flex aspect-square w-[2rem] items-center justify-center rounded-xl hover:border hover:shadow"
+          className="flex aspect-square w-[2rem] items-center justify-center rounded-xl border shadow"
           onClick={() => {
             redirectToPage(currentPage - 1);
           }}>
-          <ChevronLeftIcon />
+          <ChevronLeftIcon className="h-6 w-6" />
         </button>
       ) : (
         <div />
@@ -43,9 +43,9 @@ export default function Pagination({
 
       {!stop && (
         <button
-          className="flex aspect-square w-[2rem] items-center justify-center rounded-xl hover:border hover:shadow"
+          className="flex aspect-square w-[2rem] items-center justify-center rounded-xl border shadow"
           onClick={() => redirectToPage(currentPage + 1)}>
-          <ChevronRightIcon />
+          <ChevronRightIcon className="h-5 w-5" />
         </button>
       )}
     </div>

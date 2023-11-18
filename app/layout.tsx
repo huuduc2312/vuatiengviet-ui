@@ -56,7 +56,7 @@ export default function RootLayout({
       </head>
       <body className={`${font.className} antialiased`}>
         <div className="flex min-h-screen justify-center p-4">
-          <div className="flex flex-col items-center justify-center lg:w-3/5">
+          <div className="flex flex-col items-center justify-start md:w-4/5 lg:w-3/5">
             <Image
               src="/logo-transparent.png"
               alt="Vựa Tiếng Việt"
@@ -64,7 +64,7 @@ export default function RootLayout({
               height={100}
             />
             <Hero />
-            <div className="mt-[3rem] flex w-full grow gap-4 rounded-lg border p-4 shadow">
+            <div className="mt-[3rem] flex h-full w-full gap-4 rounded-lg border p-4 shadow">
               <Sidebar />
               <main className="w-full">{children}</main>
             </div>

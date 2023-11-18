@@ -12,7 +12,7 @@ export default function Page({
   const query = searchParams?.query;
 
   return (
-    <div className="flex w-full flex-col items-center justify-between gap-4">
+    <div className="flex h-full w-full flex-col items-center gap-4">
       <div className="flex w-full flex-col gap-4">
         <TypeSelect searchParams={searchParams} />
         <Search placeholder={"Nhập bất kỳ câu từ nào..."} />
