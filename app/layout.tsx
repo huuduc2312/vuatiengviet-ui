@@ -11,8 +11,23 @@ const font = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "Tìm vần như ý | Vua Tiếng Việt",
-  description: "Công cụ tìm vần dựa trên Trí tuệ nhân tạo",
+  title: "Tìm vần rap, tìm vần, viết nhạc bằng AI | Vựa Tiếng Việt",
+  description:
+    "Tìm vần rap, đảo online; nâng nghệ thuật nói lái, viết rap, nhạc cùng công cụ làm thơ AI. Khám phá Vựa Tiếng Việt để tìm vần online dễ dàng hơn!",
+  keywords: [
+    "tìm vần rap",
+    "tìm vần đảo",
+    "tìm vần",
+    "tìm vần rap online",
+    "tìm vần đảo online",
+    "tìm vần online",
+    "nói lái",
+    "nói lái online",
+    "viết rap",
+    "viết nhạc",
+    "viết nhạc AI",
+    "làm thơ AI",
+  ],
 };
 
 export default function RootLayout({
