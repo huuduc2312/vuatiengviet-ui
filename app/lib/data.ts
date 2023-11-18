@@ -62,8 +62,8 @@ export async function searchTuLaiRhymes(
       tu_do?: string;
     } = await resp.json();
 
-    const standardTerms = tieu_chuan?.split("\n") || [];
-    const freeStyleTerms = tu_do?.split("\n") || [];
+    const standardTerms = (tieu_chuan && tieu_chuan.split("\n")) || [];
+    const freeStyleTerms = (tu_do && tu_do.split("\n")) || [];
 
     return status == "success" ? [standardTerms, freeStyleTerms] : [[], []];
   } catch (err) {

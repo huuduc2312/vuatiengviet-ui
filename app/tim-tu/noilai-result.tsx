@@ -12,8 +12,8 @@ export default async function TulaiResult({
   const [standards, freeStyles] = await searchTuLaiRhymes(query, receivedCount);
 
   return standards.length || freeStyles.length ? (
-    <div className="flex flex-col gap-6">
-      {standards && (
+    <div className="flex w-full flex-col items-center gap-4 rounded-lg border p-3 shadow">
+      {!!standards.length && (
         <div className="flex flex-col gap-2">
           Tiêu chuẩn
           <div className="flex w-full flex-wrap justify-stretch gap-4">
@@ -23,7 +23,7 @@ export default async function TulaiResult({
           </div>
         </div>
       )}
-      {freeStyles && (
+      {!!freeStyles.length && (
         <div className="flex flex-col gap-2">
           Freestyle
           <div className="flex w-full flex-wrap justify-stretch gap-4">

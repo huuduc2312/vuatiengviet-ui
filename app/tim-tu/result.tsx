@@ -36,7 +36,7 @@ export default async function Result({
   }
 
   return terms.length ? (
-    <div className="flex h-full w-full flex-col items-center gap-4 rounded-lg border p-3 shadow">
+    <div className="flex w-full flex-col items-center gap-4 rounded-lg border p-3 shadow">
       <div className="flex w-full flex-wrap justify-stretch gap-4">
         {terms.map((term, idx) => {
           return <Card key={idx} term={term} />;
