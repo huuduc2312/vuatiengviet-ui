@@ -14,7 +14,7 @@ const font = Raleway({
 export const metadata: Metadata = {
   title: "Tìm vần rap, tìm vần, viết nhạc bằng AI | Vựa Tiếng Việt",
   description:
-    "Tìm vần rap, đảo online; nâng nghệ thuật nói lái, viết rap, nhạc cùng công cụ làm thơ AI. Khám phá Vựa Tiếng Việt để tìm vần online dễ dàng hơn!",
+    "Tìm vần rap, vần đảo online. Nâng cao nghệ thuật chơi chữ, viết rap, nhạc cùng công cụ làm thơ AI. Khám phá Vựa Tiếng Việt để tìm vần online dễ dàng hơn!",
   keywords: [
     "tìm vần rap",
     "tìm vần đảo",

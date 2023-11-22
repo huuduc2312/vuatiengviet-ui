@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 export default function Page() {
   return (
     <div className="flex h-full items-center justify-center italic">
@@ -5,3 +7,9 @@ export default function Page() {
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Viết nhạc bằng AI | Vựa Tiếng Việt",
+  description:
+    "Đón chờ công cụ viết nhạc bằng AI siêu xịn của Vựa Tiếng Việt sắp xuất hiện nhé!",
+};
