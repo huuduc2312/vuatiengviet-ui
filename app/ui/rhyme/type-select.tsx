@@ -31,10 +31,11 @@ export default function TypeSelect({
     <div className="flex w-[23rem] justify-between">
       <button
         className={clsx(
-          "flex rounded-lg px-[1.25rem] py-[0.75rem] font-semibold text-gray-400 transition-all duration-300",
+          "flex rounded-lg px-[1.25rem] py-[0.75rem] font-semibold transition-all duration-300",
           {
             "bg-blue-100 text-blue-500": currentType == SearchType.VanXuoi,
-            "hover:text-gray-800": currentType != SearchType.VanXuoi,
+            "text-gray-400 hover:text-gray-800":
+              currentType != SearchType.VanXuoi,
           },
         )}
         onClick={handleChangeType(SearchType.VanXuoi)}>
@@ -42,10 +43,11 @@ export default function TypeSelect({
       </button>
       <button
         className={clsx(
-          "flex rounded-lg px-[1.25rem] py-[0.75rem] font-semibold text-gray-400 transition-all duration-300",
+          "flex rounded-lg px-[1.25rem] py-[0.75rem] font-semibold transition-all duration-300",
           {
             "bg-blue-100 text-blue-500": currentType == SearchType.VanDao,
-            "hover:text-gray-800": currentType != SearchType.VanDao,
+            "text-gray-400 hover:text-gray-800":
+              currentType != SearchType.VanDao,
           },
         )}
         onClick={handleChangeType(SearchType.VanDao)}>
@@ -53,10 +55,11 @@ export default function TypeSelect({
       </button>
       <button
         className={clsx(
-          "flex rounded-lg px-[1.25rem] py-[0.75rem] font-semibold text-gray-400 transition-all duration-300",
+          "flex rounded-lg px-[1.25rem] py-[0.75rem] font-semibold transition-all duration-300",
           {
             "bg-blue-100 text-blue-500": currentType == SearchType.NoiLai,
-            "hover:text-gray-800": currentType != SearchType.NoiLai,
+            "text-gray-400 hover:text-gray-800":
+              currentType != SearchType.NoiLai,
           },
         )}
         onClick={handleChangeType(SearchType.NoiLai)}>

@@ -9,7 +9,7 @@ export default function Navbar() {
     <div className="fixed top-0 flex h-16 w-full items-center gap-[4rem] border-b bg-white px-[3.125rem]">
       <Link
         href={"/tim-tu"}
-        className={`${font.className} text-2xl font-extrabold -tracking-widest`}>
+        className={`${font.className} text-2xl font-extrabold -tracking-wider`}>
         Vựa Tiếng Việt
       </Link>
       <div className="flex items-center justify-stretch gap-[1.5rem] self-stretch">
