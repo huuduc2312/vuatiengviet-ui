@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
-import Sidebar from "@/app/ui/sidebar/sidebar";
-import Hero from "./ui/hero";
-import Image from "next/image";
 import Script from "next/script";
+import Navbar from "./ui/navbar";
 
 const font = Raleway({
   weight: [],
@@ -55,20 +53,9 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${font.className} antialiased`}>
-        <div className="flex min-h-screen justify-center p-4">
-          <div className="flex flex-col items-center justify-start md:w-4/5 lg:w-3/5">
-            <Image
-              src="/logo-transparent.png"
-              alt="Vựa Tiếng Việt"
-              width={100}
-              height={100}
-            />
-            <Hero />
-            <div className="mt-[3rem] flex h-full w-full gap-4 rounded-lg border p-4 shadow">
-              <Sidebar />
-              <main className="w-full">{children}</main>
-            </div>
-          </div>
+        <div className="relative flex min-h-screen flex-col items-center justify-center gap-[8.3125rem]">
+          <Navbar />
+          <main>{children}</main>
         </div>
       </body>
     </html>

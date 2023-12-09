@@ -1,0 +1,32 @@
+import clsx from "clsx";
+import { Baloo_2 } from "next/font/google";
+import Link from "next/link";
+
+const font = Baloo_2({ subsets: ["vietnamese"] });
+
+export default function Navbar() {
+  return (
+    <div className="fixed top-0 flex h-16 w-full items-center gap-[4rem] border-b bg-white px-[3.125rem]">
+      <Link
+        href={"/tim-tu"}
+        className={`${font.className} text-2xl font-extrabold -tracking-widest`}>
+        Vựa Tiếng Việt
+      </Link>
+      <div className="flex items-center justify-stretch gap-[1.5rem] self-stretch">
+        <button
+          className={clsx(
+            "flex w-[6.25rem] items-center justify-center self-stretch text-center font-semibold text-gray-400",
+            { "border-b-4 border-blue-500 text-blue-500": true },
+          )}>
+          Tìm Từ
+        </button>
+        <button className="flex w-[6.25rem] items-center justify-center self-stretch font-semibold text-gray-400">
+          Blog{" "}
+        </button>
+        <button className="flex w-[6.25rem] items-center justify-center self-stretch font-semibold text-gray-400">
+          GraPT
+        </button>
+      </div>
+    </div>
+  );
+}

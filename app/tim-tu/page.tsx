@@ -1,6 +1,5 @@
-import Search from "@/app/ui/terms/search";
+import Search from "@/app/ui/rhyme/search";
 import { SearchType } from "@/app/constants/search-type";
-import TypeSelect from "@/app/ui/terms/type-select";
 import Result from "./result";
 import Placeholder from "./placeholder";
 import { Metadata, ResolvingMetadata } from "next";
@@ -13,13 +12,13 @@ export default function Page({
   const query = searchParams?.query;
 
   return (
-    <div className="flex h-full w-full flex-col items-center gap-4">
-      <div className="flex w-full flex-col gap-4">
-        <TypeSelect searchParams={searchParams} />
+    <div className="flex h-full w-full flex-col items-center justify-center">
+      <div className="flex w-[54rem] flex-col rounded-[1.5rem] border bg-white/70 backdrop-blur-sm">
         <Search placeholder={"Nhập bất kỳ câu từ nào..."} />
+        <div className="h-[32.6875rem]">
+          {query ? <Result searchParams={searchParams} /> : <Placeholder />}
+        </div>
       </div>
-
-      {query ? <Result searchParams={searchParams} /> : <Placeholder />}
     </div>
   );
 }
