@@ -35,7 +35,7 @@ export default async function Page() {
                 <span className="mb-3 text-lg font-semibold">
                   {blog.attributes.title}
                 </span>
-                <span>
+                <span className="text-sm font-light">
                   {new Date(blog.attributes.publishedAt).toLocaleDateString(
                     "vi-VN",
                   )}

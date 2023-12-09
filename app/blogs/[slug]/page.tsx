@@ -18,7 +18,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <h1 className="mx-auto mb-2 max-w-[70rem] text-6xl font-extrabold">
           {blog.attributes.title}
         </h1>
-        <span className="mb-[2rem] block">
+        <span className="mb-[2rem] block text-base font-light">
           {new Date(blog.attributes.publishedAt).toLocaleDateString("vi-VN")}
         </span>
         <Image

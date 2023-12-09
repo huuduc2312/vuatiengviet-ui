@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export default function Page() {
   return (
-    <div className="flex h-full items-center justify-center italic">
+    <div className="flex h-full w-full items-center justify-center italic">
       Coming Soon...
     </div>
   );
