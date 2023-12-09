@@ -44,7 +44,7 @@ export async function generateMetadata({
   params: { slug: string };
 }): Promise<Metadata> {
   const blogResp = await fetch(
-    `https://cms.vuatiengviet.vn/api/blogs?filter[slug][$eq]=${params.slug}&populate=seo`,
+    `https://cms.vuatiengviet.vn/api/blogs?filter[slug][$eq]=${params.slug}&populate=*`,
   );
   const blogs = await blogResp.json();
 
@@ -57,5 +57,6 @@ export async function generateMetadata({
     description: blog.attributes.seo.metaDescription,
     keywords: blog.attributes.seo.keywords,
     robots: blog.attributes.seo.metaRobots,
+    icons: `https://cms.vuatiengviet.vn${blog.attributes.image.data.attributes.formats.thumbnail.url}`,
   };
 }
