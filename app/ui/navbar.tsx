@@ -15,15 +15,15 @@ export default function Navbar() {
       <div className="flex items-center justify-stretch gap-[1.5rem] self-stretch">
         <button
           className={clsx(
-            "flex w-[6.25rem] items-center justify-center self-stretch text-center font-semibold text-gray-400",
+            "flex w-[6.25rem] items-center justify-center self-stretch text-center font-semibold",
             { "border-b-4 border-blue-500 text-blue-500": true },
           )}>
           Tìm Từ
         </button>
-        <button className="flex w-[6.25rem] items-center justify-center self-stretch font-semibold text-gray-400">
+        <button className="flex w-[6.25rem] items-center justify-center self-stretch font-semibold text-gray-400 transition-all duration-300 hover:text-gray-700">
           Blog{" "}
         </button>
-        <button className="flex w-[6.25rem] items-center justify-center self-stretch font-semibold text-gray-400">
+        <button className="flex w-[6.25rem] items-center justify-center self-stretch font-semibold text-gray-400 transition-all duration-300 hover:text-gray-700">
           GraPT
         </button>
       </div>
