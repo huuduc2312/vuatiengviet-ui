@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import Navbar from "./ui/navbar";
 
-const font = Raleway({
+const font = Nunito({
   weight: [],
   subsets: ["vietnamese"],
 });
@@ -53,9 +53,9 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${font.className} antialiased`}>
-        <div className="relative flex min-h-screen flex-col items-center justify-center gap-[8.3125rem]">
+        <div className="relative flex min-h-screen">
           <Navbar />
-          <main>{children}</main>
+          <main className="flex w-full self-stretch">{children}</main>
         </div>
       </body>
     </html>

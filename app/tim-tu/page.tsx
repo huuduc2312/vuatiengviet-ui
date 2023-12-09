@@ -12,11 +12,13 @@ export default function Page({
   const query = searchParams?.query;
 
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center">
-      <div className="flex w-[54rem] flex-col rounded-[1.5rem] border bg-white/70 backdrop-blur-sm">
-        <Search placeholder={"Nhập bất kỳ câu từ nào..."} />
-        <div className="h-[32.6875rem]">
-          {query ? <Result searchParams={searchParams} /> : <Placeholder />}
+    <div className="flex w-full flex-col items-center justify-center gap-[8.3125rem] self-stretch">
+      <div className="flex h-full w-full flex-col items-center justify-center">
+        <div className="flex w-[54rem] flex-col rounded-[1.5rem] border bg-white/70 backdrop-blur-sm">
+          <Search placeholder={"Nhập bất kỳ câu từ nào..."} />
+          <div className="h-[32.6875rem]">
+            {query ? <Result searchParams={searchParams} /> : <Placeholder />}
+          </div>
         </div>
       </div>
     </div>
