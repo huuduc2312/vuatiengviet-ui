@@ -8,7 +8,7 @@ import {
   useRouter,
 } from "next/navigation";
 
-export default function TypeSelect({
+export default function TypeTabMenu({
   searchParams,
 }: {
   searchParams?: ReadonlyURLSearchParams;
@@ -28,7 +28,7 @@ export default function TypeSelect({
   }
 
   return (
-    <div className="flex w-[23rem] justify-between">
+    <div className="hidden w-[23rem] justify-between md:flex">
       <button
         className={clsx(
           "flex rounded-lg px-[1.25rem] py-[0.75rem] font-semibold transition-all duration-300",

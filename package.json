@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "clsx": "^2.0.0",
     "eslint-plugin-unused-imports": "^3.0.0",

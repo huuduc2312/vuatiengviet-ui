@@ -1,4 +1,4 @@
-import { searchTuLaiRhymes } from "../lib/data";
+import { searchTuLaiRhymes } from "../lib/get-rhymes";
 import { Card } from "../ui/rhyme/term-card";
 import NoResult from "./no-result";
 
@@ -12,7 +12,7 @@ export default async function TulaiResult({
   const [standards, freeStyles] = await searchTuLaiRhymes(query, receivedCount);
 
   return standards.length || freeStyles.length ? (
-    <div className="flex flex-col gap-5 px-[3.375rem] py-[2.25rem]">
+    <div className="flex flex-col gap-5 p-6 md:px-[3.375rem] md:py-[2.25rem]">
       {!!standards.length && (
         <div className="flex w-full flex-col gap-2">
           Tiêu chuẩn

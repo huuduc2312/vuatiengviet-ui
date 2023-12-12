@@ -4,27 +4,6 @@ import Result from "./result";
 import Placeholder from "./placeholder";
 import { Metadata, ResolvingMetadata } from "next";
 
-export default function Page({
-  searchParams,
-}: {
-  searchParams?: { query?: string; type?: SearchType; page?: string };
-}) {
-  const query = searchParams?.query;
-
-  return (
-    <div className="flex w-full flex-col items-center justify-center gap-[8.3125rem] self-stretch">
-      <div className="flex h-full w-full flex-col items-center justify-center">
-        <div className="flex w-[54rem] flex-col rounded-[1.5rem] border bg-white/70 backdrop-blur-sm">
-          <Search placeholder={"Nhập bất kỳ câu từ nào..."} />
-          <div className="h-[32.6875rem]">
-            {query ? <Result searchParams={searchParams} /> : <Placeholder />}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 type Props = {
   params: { id: string };
   searchParams: { type?: SearchType };
@@ -57,4 +36,27 @@ export async function generateMetadata(
   return {
     ...metadataMap[type],
   };
+}
+
+export default function Page({
+  searchParams,
+}: {
+  searchParams?: { query?: string; type?: SearchType; page?: string };
+}) {
+  const query = searchParams?.query;
+
+  return (
+    <div className="flex h-full px-[1rem] py-[3rem] md:items-center md:justify-center">
+      <div className="flex h-full w-full flex-col rounded-[1.5rem] border bg-white/70 backdrop-blur-sm md:w-[54rem]">
+        <Search
+          placeholder={{
+            desktop: "Nhập bất kỳ câu từ nào...",
+            mobile: "Tìm câu từ",
+          }}
+        />
+        {/* <div className="h-full md:h-[32.6875rem]"> */}
+        {query ? <Result searchParams={searchParams} /> : <Placeholder />}
+      </div>
+    </div>
+  );
 }

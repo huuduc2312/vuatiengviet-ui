@@ -24,7 +24,7 @@ export default function Pagination({
   }
 
   return (
-    <div className="flex h-[3.6875rem] items-center justify-center self-stretch border-t">
+    <div className="flex w-full items-center justify-center border-t py-4">
       <div className="grid grid-cols-3 items-center justify-stretch gap-2">
         {currentPage > 1 ? (
           <button

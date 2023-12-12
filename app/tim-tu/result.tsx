@@ -1,4 +1,4 @@
-import { searchVanDaoRhymes, searchVanXuoiRhymes } from "@/app/lib/data";
+import { searchVanDaoRhymes, searchVanXuoiRhymes } from "@/app/lib/get-rhymes";
 import { Card } from "../ui/rhyme/term-card";
 import { SearchType } from "@/app/constants/search-type";
 import Pagination from "../ui/rhyme/pagination";
@@ -36,14 +36,12 @@ export default async function Result({
   }
 
   return (
-    <div className="flex h-full w-full flex-col items-center justify-between">
+    <div className="flex h-full w-full flex-col justify-between overflow-y-auto">
       {terms.length ? (
-        <div className="flex h-[29rem] px-[3.375rem] py-[2.25rem]">
-          <div className="flex flex-1 flex-wrap content-between items-start gap-x-[20px] self-stretch">
-            {terms.map((term, idx) => {
-              return <Card key={idx} term={term} />;
-            })}
-          </div>
+        <div className="flex h-fit max-h-full flex-wrap items-start gap-4 gap-y-6 overflow-y-auto p-4 md:px-[3.375rem] md:py-[2.25rem]">
+          {terms.map((term, idx) => {
+            return <Card key={idx} term={term} />;
+          })}
         </div>
       ) : (
         <NoResult />

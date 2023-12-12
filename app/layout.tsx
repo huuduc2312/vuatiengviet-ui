@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import Navbar from "./ui/navbar";
+import Navbar from "./ui/navbar/navbar";
+import Menu from "./ui/navbar/menu";
+import MobileMenu from "./ui/navbar/mobile-menu";
 
 const font = Nunito({
   weight: [],
@@ -53,9 +55,10 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${font.className} antialiased`}>
-        <div className="relative flex min-h-screen">
+        <div className="flex h-screen flex-col overflow-y-auto">
           <Navbar />
-          <main className="flex w-full self-stretch">{children}</main>
+          <main className="h-full overflow-y-auto">{children}</main>
+          <MobileMenu />
         </div>
       </body>
     </html>
