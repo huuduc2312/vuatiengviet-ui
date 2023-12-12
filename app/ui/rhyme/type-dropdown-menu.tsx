@@ -1,12 +1,10 @@
 "use client";
 
 import { SearchType } from "@/app/constants/search-type";
-import { Listbox, Menu, Transition } from "@headlessui/react";
+import { Listbox, Transition } from "@headlessui/react";
 import {
-  ChevronDownIcon,
   ChevronUpDownIcon,
 } from "@heroicons/react/24/outline";
-import clsx from "clsx";
 import {
   ReadonlyURLSearchParams,
   usePathname,

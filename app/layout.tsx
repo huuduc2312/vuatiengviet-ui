@@ -3,7 +3,6 @@ import { Nunito } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import Navbar from "./ui/navbar/navbar";
-import Menu from "./ui/navbar/menu";
 import MobileMenu from "./ui/navbar/mobile-menu";
 
 const font = Nunito({

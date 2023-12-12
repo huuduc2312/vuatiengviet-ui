@@ -3,7 +3,6 @@
 import { usePathname } from "next/navigation";
 import Item from "./item";
 import {
-  MagnifyingGlassCircleIcon,
   MagnifyingGlassIcon,
   NewspaperIcon,
   PencilSquareIcon,

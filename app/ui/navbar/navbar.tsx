@@ -1,12 +1,8 @@
 "use client";
 
-import clsx from "clsx";
 import { Baloo_2 } from "next/font/google";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import Item from "./item";
 import Image from "next/image";
-import Logo from "../logo";
 import Menu from "./menu";
 
 const font = Baloo_2({ subsets: ["vietnamese"] });
