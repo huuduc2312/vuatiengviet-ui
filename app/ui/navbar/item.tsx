@@ -19,7 +19,7 @@ export default function Item({
     <Link
       href={url}
       className={clsx(
-        "flex w-[6.25rem] flex-col items-center justify-center self-stretch py-4 text-center font-semibold transition-all duration-300",
+        "flex w-[6.25rem] flex-col items-center justify-start self-stretch py-3 font-semibold transition-all duration-300",
         {
           "border-t-4 border-blue-500 text-blue-500 md:border-b-4 md:border-t-0":
             active,
