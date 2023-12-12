@@ -72,3 +72,21 @@ export async function searchTuLaiRhymes(
 
   return [[], []];
 }
+
+export async function getRandomSentence(): Promise<string> {
+  try {
+    // TODO: load URL from env
+    const resp = await fetch(`http://127.0.0.1:8501/random_sentence`);
+
+    const {
+      status,
+      random_sentence,
+    }: { status: string; random_sentence: string } = await resp.json();
+
+    return status == "success" ? random_sentence : "";
+  } catch (err) {
+    console.error("get random sentence", (err as Error).message);
+  }
+
+  return "";
+}
