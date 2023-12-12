@@ -3,7 +3,7 @@ import { cmsHost } from "./constants";
 export async function getBlogs(): Promise<any[]> {
   try {
     const blogResp = await fetch(`${cmsHost}/api/blogs?populate=*`, {
-      cache: "no-cache",
+      cache: "no-store",
     });
     const blogs = await blogResp.json();
 

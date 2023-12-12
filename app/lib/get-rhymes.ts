@@ -76,7 +76,9 @@ export async function searchTuLaiRhymes(
 export async function getRandomSentence(): Promise<string> {
   try {
     // TODO: load URL from env
-    const resp = await fetch(`http://127.0.0.1:8501/random_sentence`);
+    const resp = await fetch(`http://127.0.0.1:8501/random_sentence`, {
+      cache: "no-store",
+    });
 
     const {
       status,
