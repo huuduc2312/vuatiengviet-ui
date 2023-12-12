@@ -54,7 +54,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${font.className} antialiased`}>
-        <div className="flex h-screen flex-col overflow-y-auto">
+        <div className="flex h-[100dvh] flex-col overflow-y-auto">
           <Navbar />
           <main className="h-full overflow-y-auto">{children}</main>
           <MobileMenu />
