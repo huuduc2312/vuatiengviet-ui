@@ -18,7 +18,7 @@ export async function getBlogs(): Promise<any[]> {
 export async function getBlog(slug: string): Promise<any> {
   try {
     const blogResp = await fetch(
-      `${cmsHost}/api/blogs?filters[slug][$eq]=${slug}&populate=image`,
+      `${cmsHost}/api/blogs?filters[slug][$eq]=${slug}&populate=*`,
     );
     const blogs = await blogResp.json();
 
