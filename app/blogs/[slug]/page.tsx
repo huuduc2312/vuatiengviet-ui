@@ -33,8 +33,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
   if (!blog) return notFound();
 
   const blogImg = blog.attributes.image.data;
-  const imgFormat =
-    blogImg.attributes.formats.large || blogImg.attributes.formats.medium;
+  const img =
+    blogImg.attributes.formats.large ||
+    blogImg.attributes.formats.medium ||
+    blogImg.attributes.formats.small ||
+    blogImg.attributes.formats.thumbnail ||
+    null;
 
   return (
     <div className="mx-auto w-fit overflow-y-auto bg-white md:px-[8rem]">
@@ -45,14 +49,16 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <span className="block text-base font-light">
           {new Date(blog.attributes.publishedAt).toLocaleDateString("vi-VN")}
         </span>
-        <Image
-          src={`${cmsHost}${imgFormat.url}`}
-          height={imgFormat.height}
-          width={imgFormat.width}
-          sizes="100vw"
-          className="h-auto w-full rounded-lg"
-          alt={blog.attributes.image.data.attributes.alternativeText}
-        />
+        {img && (
+          <Image
+            src={`${cmsHost}${img.url}`}
+            height={img.height}
+            width={img.width}
+            sizes="100vw"
+            className="h-auto w-full rounded-lg"
+            alt={blog.attributes.image.data.attributes.alternativeText}
+          />
+        )}
         <div
           className="leading-8 md:leading-9 [&>p]:my-2 md:[&>p]:my-5"
           dangerouslySetInnerHTML={{ __html: blog.attributes.content }}

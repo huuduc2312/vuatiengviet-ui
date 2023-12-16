@@ -38,8 +38,8 @@ export default function Search({
   }, 300);
 
   return (
-    <div className="flex rounded-t-[1.5rem] border-b-2 border-gray-100 bg-white px-[1.3125rem] py-[0.5rem] md:gap-5 md:px-[3.3125rem] md:py-2">
-      <div className="flex items-center gap-5 self-stretch overflow-hidden md:w-[23.0625rem]">
+    <div className="flex items-center justify-between rounded-t-[1.5rem] border-b-2 border-gray-100 bg-white px-[1.3125rem] py-[0.5rem] md:gap-5 md:px-[3.3125rem] md:py-2">
+      <div className="flex items-center gap-5 overflow-hidden md:w-[23.0625rem]">
         <MagnifyingGlassIcon className="h-6 w-6 fill-gray-400" />
         <input
           className="hidden w-full grow bg-transparent placeholder:italic focus:outline-none md:block"
