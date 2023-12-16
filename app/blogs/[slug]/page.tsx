@@ -9,14 +9,9 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
-  const blogResp = await fetch(
-    `https://cms.vuatiengviet.vn/api/blogs?filter[slug][$eq]=${params.slug}&populate=*`,
-  );
-  const blogs = await blogResp.json();
+  const blog = await getBlog(params.slug);
 
-  if (!blogs) return notFound();
-
-  const blog = blogs.data[0];
+  if (!blog) return notFound();
 
   return {
     title: blog.attributes.seo.metaTitle,
