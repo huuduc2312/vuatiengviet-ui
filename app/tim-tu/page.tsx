@@ -11,17 +11,17 @@ type Props = {
 
 const metadataMap: { [key in SearchType]: Metadata } = {
   "van-xuoi": {
-    title: "Tìm vần, vần ba, vần đôi, vần đơn | Vựa Tiếng Việt",
+    title: "Tìm vần | vần ba, vần đôi, vần đơn | Vựa Tiếng Việt",
     description:
-      "Tìm vần, tìm từ, tìm từ có vần, tìm vần đôi, tìm vần ba, tìm vần online. Nâng cao nghệ thuật chơi chữ, viết rap, nhạc cùng công cụ làm thơ AI. Khám phá Vựa Tiếng Việt để tìm vần online dễ dàng hơn!",
+      "Tìm vần | tìm từ, tìm từ có vần, tìm vần đôi, tìm vần ba, tìm vần online. Nâng cao nghệ thuật chơi chữ, viết rap, nhạc cùng công cụ làm thơ AI. Khám phá Vựa Tiếng Việt để tìm vần online dễ dàng hơn!",
   },
   "van-dao": {
-    title: "Tìm vần, vần đảo, tìm từ đảo vần, vần đảo siêu đỉnk| Vựa Tiếng Việt",
+    title: "Tìm vần | vần đảo, tìm từ đảo vần, vần đảo siêu đỉnk| Vựa Tiếng Việt",
     description:
       "Tìm vần, tìm vần đảo, tìm từ đảo vần, tìm vần đảo online. Nâng cao nghệ thuật chơi chữ, viết rap, nhạc cùng công cụ làm thơ AI. Khám phá Vựa Tiếng Việt để tìm vần đảo online dễ dàng hơn!",
   },
   "noi-lai": {
-    title: "Tìm từ, tìm từ nói lái, nói lái là gì? | Vựa Tiếng Việt",
+    title: "Tìm từ nói lái | nói lái là gì? | Vựa Tiếng Việt",
     description:
       "Tìm từ, tìm từ nói lái, nói lái chuẩn và nói lái tự do, nói lái là gì. Nâng cao nghệ thuật chơi chữ, viết rap, nhạc cùng công cụ làm thơ AI. Khám phá Vựa Tiếng Việt để tìm hiểu về thú chơi chữ độc nhất vô nhị của người Việt - nói lái",
   },
