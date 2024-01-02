@@ -5,19 +5,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: "https://vuatiengviet.vn",
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "daily",
       priority: 1,
     },
     {
       url: "https://vuatiengviet.vn/tim-tu",
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "daily",
       priority: 1,
     },
     {
       url: "https://vuatiengviet.vn/blogs",
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "daily",
       priority: 0.8,
     },
     {
