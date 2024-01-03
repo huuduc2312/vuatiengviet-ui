@@ -13,7 +13,7 @@ export default function Navbar() {
       <div className="flex items-center">
         <Image src="/logo.png" alt="logo" width={39} height={26} />
         <Link
-          href={"/tim-tu"}
+          href={"/"}
           className={`${font.className} text-2xl font-extrabold -tracking-wider`}>
           Vựa Tiếng Việt
         </Link>
