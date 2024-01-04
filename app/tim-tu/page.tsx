@@ -46,16 +46,21 @@ export default function Page({
   const query = searchParams?.query;
 
   return (
-    <div className="flex h-full px-[1rem] py-[3rem] md:items-center md:justify-center">
-      <div className="flex h-full w-full flex-col rounded-[1.5rem] border bg-white/70 backdrop-blur-sm md:w-[54rem]">
-        <Search
-          placeholder={{
-            desktop: "Nhập bất kỳ câu từ nào...",
-            mobile: "Tìm câu từ",
-          }}
-        />
-        {query ? <Result searchParams={searchParams} /> : <Placeholder />}
+    <>
+      <head>
+        <link rel="canonical" href="https://vuatiengviet.vn" key="canonical"/>
+      </head>
+      <div className="flex h-full px-[1rem] py-[3rem] md:items-center md:justify-center">
+        <div className="flex h-full w-full flex-col rounded-[1.5rem] border bg-white/70 backdrop-blur-sm md:w-[54rem]">
+          <Search
+            placeholder={{
+              desktop: "Nhập bất kỳ câu từ nào...",
+              mobile: "Tìm câu từ",
+            }}
+          />
+          {query ? <Result searchParams={searchParams} /> : <Placeholder />}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
