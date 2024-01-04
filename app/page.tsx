@@ -11,7 +11,7 @@ type Props = {
 
 const metadataMap: { [key in SearchType]: Metadata } = {
   "van-xuoi": {
-    title: "Tìm vần đôi, vần ba, vần má | Vựa Tiếng Việt",
+    title: "Tìm vần | vần đôi, vần ba, vần đảo, vần rap | Vựa Tiếng Việt",
     description:
       "Tìm vần đôi, tìm vần ba, tìm vần online. Nâng cao nghệ thuật chơi chữ, viết rap, nhạc cùng công cụ làm thơ AI. Khám phá Vựa Tiếng Việt để tìm vần online dễ dàng hơn!",
   },
