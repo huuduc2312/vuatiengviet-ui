@@ -10,7 +10,7 @@ const font = Baloo_2({ subsets: ["vietnamese"] });
 
 export default function Navbar() {
   return (
-    <nav className="flex w-full items-center justify-start gap-[4rem] border-b bg-white px-[1.5rem] py-2 md:px-[3.125rem] md:py-0">
+    <nav className="flex w-full items-center justify-start gap-[4rem] border-b px-[1.5rem] py-2 md:px-[3.125rem] md:py-0" style={{ backgroundColor: '#fcfbfe' }}>
       <div className="flex items-center">
         <Image src="/logo.png" alt="logo" width={39} height={26} />
         <Link
