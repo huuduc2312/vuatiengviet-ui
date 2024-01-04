@@ -49,6 +49,7 @@ export default function Page({
     <>
       <head>
         <link rel="shortcut icon" type="image/x-icon" href="https://vuatiengviet.vn/favicon_48.ico"/>
+        <link rel="canonical" href="https://vuatiengviet.vn" key="canonical"/>
       </head>
       <div className="flex h-full px-[1rem] py-[3rem] md:items-center md:justify-center">
         <div className="flex h-full w-full flex-col rounded-[1.5rem] border bg-white/70 backdrop-blur-sm md:w-[54rem]">
