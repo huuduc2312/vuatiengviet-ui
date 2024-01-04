@@ -4,6 +4,7 @@ import { Baloo_2 } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
 import Menu from "./menu";
+import SocialMediaButtons from "./footer/SocialMediaButtons";
 
 const font = Baloo_2({ subsets: ["vietnamese"] });
 
@@ -19,6 +20,7 @@ export default function Navbar() {
         </Link>
       </div>
       <Menu />
+      <SocialMediaButtons />
     </nav>
   );
 }

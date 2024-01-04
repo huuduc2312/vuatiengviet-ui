@@ -15,7 +15,7 @@ export default function MobileMenu() {
   const isGraPT = path.startsWith("/grapt");
 
   return (
-    <nav className="flex h-[7rem] w-full items-center justify-between gap-[1.5rem] bg-white px-4 md:hidden">
+    <nav className="flex h-[5rem] w-full items-center justify-between gap-[1.5rem] bg-white px-4 md:hidden">
       <Item
         icon={<MagnifyingGlassIcon className="h-6 w-6" />}
         active={isTimTu}
