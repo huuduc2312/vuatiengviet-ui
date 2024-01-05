@@ -11,7 +11,7 @@ type Props = {
 
 const metadataMap: { [key in SearchType]: Metadata } = {
   "van-xuoi": {
-    title: "Tìm vần | vần đôi, vần ba, vần đảo, vần rap | Vựa Tiếng Việt",
+    title: "Vựa Tiếng Việt | Tìm vần | vần đôi, vần ba, vần đảo, vần rap",
     description:
       "Tìm vần đôi, tìm vần ba, tìm vần online. Nâng cao nghệ thuật chơi chữ, viết rap, nhạc cùng công cụ làm thơ AI. Khám phá Vựa Tiếng Việt để tìm vần online dễ dàng hơn!",
   },
@@ -48,7 +48,7 @@ export default function Page({
   return (
     <>
       <head>
-        <link rel="shortcut icon" type="image/x-icon" href="https://vuatiengviet.vn/favicon_48.ico"/>
+        <link rel="shortcut icon" type="image/x-icon" href="https://vuatiengviet.vn/favicon_144.ico"/>
         <link rel="canonical" href="https://vuatiengviet.vn" key="canonical"/>
       </head>
       <div className="flex h-full px-[1rem] py-[3rem] md:items-center md:justify-center">
