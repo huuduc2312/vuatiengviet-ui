@@ -11,19 +11,19 @@ type Props = {
 
 const metadataMap: { [key in SearchType]: Metadata } = {
   "van-xuoi": {
-    title: "Tìm vần | vần ba, vần đôi, vần đơn | Vựa Tiếng Việt",
+    title: "Tìm Vần & Vần Đảo | Vần Ba, Đôi, Đơn | Vựa Tiếng Việt - Công Cụ Sáng Tạo Vần",
     description:
-      "Tìm vần | tìm từ, tìm từ có vần, tìm vần đôi, tìm vần ba, tìm vần online. Nâng cao nghệ thuật chơi chữ, viết rap, nhạc cùng công cụ làm thơ AI. Khám phá Vựa Tiếng Việt để tìm vần online dễ dàng hơn!",
+      "Khám phá công cụ Tìm Vần & Vần Đảo trực tuyến tại Vựa Tiếng Việt! Tìm từ với vần đôi, vần ba, vần đơn một cách dễ dàng. Tối ưu hóa sáng tạo trong viết rap, làm thơ, và nhạc với AI. Hỗ trợ tìm vần online, nâng cao nghệ thuật chơi chữ và biến ngôn từ thành nghệ thuật.",
   },
   "van-dao": {
-    title: "Tìm vần | vần đảo, tìm từ đảo vần, vần đảo siêu đỉnk| Vựa Tiếng Việt",
+    title: "Tìm Vần & Vần Đảo | Chinh Phục Nghệ Thuật Ngôn Từ Với Vựa Tiếng Việt",
     description:
-      "Tìm vần, tìm vần đảo, tìm từ đảo vần, tìm vần đảo online. Nâng cao nghệ thuật chơi chữ, viết rap, nhạc cùng công cụ làm thơ AI. Khám phá Vựa Tiếng Việt để tìm vần đảo online dễ dàng hơn!",
+      "Công cụ Tìm Vần & Vần Đảo đột phá - lựa chọn hàng đầu cho người yêu thơ, rap và nhạc. Tại Vựa Tiếng Việt, bạn có thể tìm kiếm vần ba, vần đôi, vần đơn một cách nhanh chóng. Tận hưởng trải nghiệm tìm vần online, phát huy tối đa khả năng sáng tạo với AI.",
   },
   "noi-lai": {
-    title: "Tìm từ nói lái | nói lái là gì? | Vựa Tiếng Việt",
+    title: "Công Cụ Tìm Vần & Vần Đảo | Nâng Tầm Văn Chương Với Vựa Tiếng Việt",
     description:
-      "Tìm từ, tìm từ nói lái, nói lái chuẩn và nói lái tự do, nói lái là gì. Nâng cao nghệ thuật chơi chữ, viết rap, nhạc cùng công cụ làm thơ AI. Khám phá Vựa Tiếng Việt để tìm hiểu về thú chơi chữ độc nhất vô nhị của người Việt - nói lái",
+      "Phát huy vẻ đẹp của từ ngữ với Công Cụ Tìm Vần & Vần Đảo tại Vựa Tiếng Việt. Tìm từ có vần đôi, vần ba, vần đơn một cách chính xác và sáng tạo. Làm thơ, viết rap, sáng tác nhạc cùng AI. Tìm vần online trở nên thuận tiện và nghệ thuật hơn bao giờ hết.",
   },
 };
 

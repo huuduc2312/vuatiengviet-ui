@@ -12,9 +12,9 @@ const font = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Tìm vần | vần ba, vần đôi, vần đơn | Vựa Tiếng Việt",
+  title: "Tìm Vần & Vần Đảo | Vần Ba, Đôi, Đơn | Vựa Tiếng Việt - Công Cụ Sáng Tạo Vần",
   description:
-    "Tìm vần | tìm từ, tìm từ có vần, tìm vần đôi, tìm vần ba, tìm vần online. Nâng cao nghệ thuật chơi chữ, viết rap, nhạc cùng công cụ làm thơ AI. Khám phá Vựa Tiếng Việt để tìm vần online dễ dàng hơn!",
+    "Khám phá công cụ Tìm Vần & Vần Đảo trực tuyến tại Vựa Tiếng Việt! Tìm từ với vần đôi, vần ba, vần đơn một cách dễ dàng. Tối ưu hóa sáng tạo trong viết rap, làm thơ, và nhạc với AI. Hỗ trợ tìm vần online, nâng cao nghệ thuật chơi chữ và biến ngôn từ thành nghệ thuật.",
   keywords: [
     "tìm vần",
     "vần đôi",
