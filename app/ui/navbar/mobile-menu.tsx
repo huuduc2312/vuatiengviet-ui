@@ -10,7 +10,7 @@ import {
 
 export default function MobileMenu() {
   const path = usePathname();
-  const isTimTu = path.startsWith("/tim-tu");
+  const isTimTu = path.startsWith("/tim-van");
   const isBlogs = path.startsWith("/blogs");
   const isGraPT = path.startsWith("/grapt");
 
@@ -19,8 +19,8 @@ export default function MobileMenu() {
       <Item
         icon={<MagnifyingGlassIcon className="h-6 w-6" />}
         active={isTimTu}
-        url="/tim-tu"
-        label="Tìm Từ"
+        url="/tim-van"
+        label="Tìm Vần"
       />
       <Item
         icon={<NewspaperIcon className="h-6 w-6" />}
