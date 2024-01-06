@@ -48,10 +48,16 @@ export default function Page({
   return (
     <>
       <head>
+        <link rel="shortcut icon" type="image/x-icon" href="https://vuatiengviet.vn/favicon_144.ico"/>
         <link rel="canonical" href="https://vuatiengviet.vn" key="canonical"/>
       </head>
-      <div className="flex h-full px-[1rem] py-[3rem] md:items-center md:justify-center">
-        <div className="flex h-full w-full flex-col rounded-[1.5rem] border bg-white/70 backdrop-blur-sm md:w-[54rem]">
+      <div className="flex flex-col h-full px-[1rem] py-[1rem] md:items-center md:justify-center">
+        {/* Title at the top, minimize its space by making it non-flexible */}
+        <div className="mb-2 text-center">
+          <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-none" style={{ opacity: 0.001 }}>Tìm Vần: Từ Điển Vần Rap Mọi Lúc</h1>
+        </div>
+        {/* Search component, allowed to grow and take the remaining space */}
+        <div className="flex-grow w-full rounded-[1.5rem] border bg-white/60 backdrop-blur-sm md:w-[54rem] mb-2">
           <Search
             placeholder={{
               desktop: "Nhập bất kỳ câu từ nào...",
@@ -59,6 +65,12 @@ export default function Page({
             }}
           />
           {query ? <Result searchParams={searchParams} /> : <Placeholder />}
+        </div>
+        {/* Footer text, make sure it does not grow and takes minimal space */}
+        <div className="text-center">
+          <h2 className="text-base md:text-lg lg:text-xl font-light italic leading-none" style={{ opacity: 0.001 }}>
+            Gợi ý: tìm vần, vần đảo, cậu vàng ơi...
+          </h2>
         </div>
       </div>
     </>
