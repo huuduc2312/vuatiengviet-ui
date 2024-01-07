@@ -24,17 +24,70 @@ body {
   min-height: 100dvh;
 }
 
-/* @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+/* Bottom Tooltip Styles */
+
+/* Tooltip container */
+.con-tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: default;
 }
-html,body{
-  display: grid;
-  height: 100%;
-  width: 100%;
-  place-items: center;
-  background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
-} */
+
+/* Tooltip */
+.tooltip {
+  visibility: hidden;
+  width: max-content; /* or a fixed width if you prefer */
+  max-width: 200px; /* prevent it from being too wide */
+  /* white-space: nowrap; */
+  opacity: 0.7;
+  z-index: 9999;
+  background: #333;
+  color: #E086D3;
+  padding: 10px;
+  border-radius: 9px;
+  font-size: 16px;
+  box-shadow: 0 0 3px rgba(56, 54, 54, 0.86);
+  
+  /* Positioning */
+  position: absolute;
+  top: 115%; /* Adjust this value if needed */
+  left: -50%;
+  /* transform: translateX(-50%) translateY(10px); */
+  
+  /* Transition */
+  transition: visibility 0.3s linear, opacity 0.3s linear, transform 0.3s linear;
+}
+
+/* Tooltip arrow */
+.tooltip::after {
+  content: " ";
+  border-style: solid;
+  border-width: 0 12.5px 12px 12.5px;
+  border-color: transparent transparent #333 transparent;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-10%);
+}
+
+/* Show tooltip on hover */
+.con-tooltip:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-10%) translateY(0px);
+}
+
+/* Optional: Animation for the tooltip */
+@keyframes odsoky {
+  0% {
+    transform: translateY(-1px);
+  }
+  100% {
+    transform: translateY(2px);
+  }
+}
+
+/* Apply the animation */
+.con-tooltip:hover .tooltip {
+  animation: odsoky 1s ease-in-out infinite alternate;
+}
