@@ -54,10 +54,13 @@ export default function Page({
       <div className="flex flex-col h-full px-[1rem] py-[1rem] md:items-center md:justify-center">
         {/* Title at the top, minimize its space by making it non-flexible */}
         <div className="mb-2 text-center">
-          <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-none" style={{ opacity: 0.001 }}>Tìm Vần: Từ Điển Vần Rap Mọi Lúc</h1>
+          <h1 className="text-lg md:text-1xl lg:text-2xl font-bold leading-none" style={{ opacity: 0.001 }}>Tìm Vần: Từ Điển Vần Rap Mọi Lúc</h1>
+          <h2 className="text-xs font-light italic leading-none" style={{ opacity: 0.001 }}>
+            Gợi ý: tìm vần, web tìm vần, tìm vần online, vần đảo, cậu vàng ơi...
+          </h2>
         </div>
         {/* Search component, allowed to grow and take the remaining space */}
-        <div className="flex-grow w-full rounded-[1.5rem] border bg-white/60 backdrop-blur-sm md:w-[54rem] mb-2">
+        <div className="flex h-full w-full flex-col rounded-[1.5rem] border bg-white/60 backdrop-blur-sm md:w-[54rem]">
           <Search
             placeholder={{
               desktop: "Nhập bất kỳ câu từ nào...",
@@ -65,12 +68,6 @@ export default function Page({
             }}
           />
           {query ? <Result searchParams={searchParams} /> : <Placeholder />}
-        </div>
-        {/* Footer text, make sure it does not grow and takes minimal space */}
-        <div className="text-center">
-          <h2 className="text-base md:text-lg lg:text-xl font-light italic leading-none" style={{ opacity: 0.001 }}>
-            Gợi ý: tìm vần, vần đảo, cậu vàng ơi...
-          </h2>
         </div>
       </div>
     </>
