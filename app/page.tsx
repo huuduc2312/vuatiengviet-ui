@@ -49,7 +49,7 @@ export default function Page({
     <>
       <head>
         <link rel="shortcut icon" type="image/x-icon" href="https://vuatiengviet.vn/favicon_144.ico"/>
-        <link rel="canonical" href="https://vuatiengviet.vn" key="canonical"/>
+        {/* <link rel="canonical" href="https://vuatiengviet.vn" key="canonical"/> */}
       </head>
       <div className="flex flex-col h-full px-[1rem] py-[1rem] md:items-center md:justify-center">
         {/* Title at the top, minimize its space by making it non-flexible */}
