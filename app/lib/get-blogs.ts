@@ -18,8 +18,9 @@ export async function getBlogs(): Promise<any[]> {
 export async function getBlog(slug: string): Promise<any> {
   try {
     const blogResp = await fetch(
-      `${cmsHost}/api/blogs?filters[slug][$eq]=${slug}&populate=*`,
-    );
+      `${cmsHost}/api/blogs?filters[slug][$eq]=${slug}&populate=*`,{
+        cache: "no-store",
+    });
     const blogs = await blogResp.json();
 
     return blogs.data[0] ?? null;
