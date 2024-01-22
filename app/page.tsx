@@ -11,17 +11,17 @@ type Props = {
 
 const metadataMap: { [key in SearchType]: Metadata } = {
   "van-xuoi": {
-    title: "Tìm Vần & Vần Đảo | Vần Ba, Đôi, Đơn | Vựa Tiếng Việt - Công Cụ Sáng Tạo Vần",
+    title: "Tìm Vần & Vần Đảo | Vần Ba, Vần Đôi, Vần Tư | Vựa Tiếng Việt",
     description:
       "Khám phá công cụ Tìm Vần & Vần Đảo trực tuyến tại Vựa Tiếng Việt! Tìm Vần với vần đôi, vần ba, vần đơn một cách dễ dàng. Tối ưu hóa sáng tạo trong viết rap, làm thơ, và nhạc với AI. Hỗ trợ tìm vần online, nâng cao nghệ thuật chơi chữ và biến ngôn từ thành nghệ thuật.",
   },
   "van-dao": {
-    title: "Tìm Vần & Vần Đảo | Chinh Phục Nghệ Thuật Ngôn Từ Với Vựa Tiếng Việt",
+    title: "Tìm Vần & Vần Đảo | Tìm Vần Đảo Như Rang Lạc | Vựa Tiếng Việt",
     description:
       "Công cụ Tìm Vần & Vần Đảo đột phá - lựa chọn hàng đầu cho người yêu thơ, rap và nhạc. Tại Vựa Tiếng Việt, bạn có thể tìm kiếm vần ba, vần đôi, vần đơn một cách nhanh chóng. Tận hưởng trải nghiệm tìm vần online, phát huy tối đa khả năng sáng tạo với AI.",
   },
   "noi-lai": {
-    title: "Công Cụ Tìm Vần & Vần Đảo | Nâng Tầm Văn Chương Với Vựa Tiếng Việt",
+    title: "Web Tìm Vần & Nói Lái | Vựa Tiếng Việt",
     description:
       "Phát huy vẻ đẹp của từ ngữ với Công Cụ Tìm Vần & Vần Đảo tại Vựa Tiếng Việt. Tìm Vần có vần đôi, vần ba, vần đơn một cách chính xác và sáng tạo. Làm thơ, viết rap, sáng tác nhạc cùng AI. Tìm vần online trở nên thuận tiện và nghệ thuật hơn bao giờ hết.",
   },
