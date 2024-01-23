@@ -11,19 +11,19 @@ type Props = {
 
 const metadataMap: { [key in SearchType]: Metadata } = {
   "van-xuoi": {
-    title: "Tìm Vần & Vần Đảo | Vần Ba, Vần Đôi, Vần Tư | Vựa Tiếng Việt",
+    title: "Tìm Vần Đôi & Vần Đảo | Vần Ba, Vần Tư | Web Tìm Vần",
     description:
-      "Web Tìm Vần Đảo. Từ điển vần rap. làm thơ, viết nhạc, sáng tác một cách dễ dàng. Phần mềm tìm vần online, dành cho rapper, nhạc sĩ, nhà thơ và người yêu chữ.",
+      "Web Tìm Vần Đôi. Từ điển vần rap. làm thơ, viết nhạc, sáng tác một cách dễ dàng. Phần mềm tìm vần online, dành cho rapper, nhạc sĩ, nhà thơ và người yêu chữ.",
   },
   "van-dao": {
     title: "Tìm Vần & Vần Đảo | Tìm Vần Đảo Như Rang Lạc | Vựa Tiếng Việt",
     description:
-      "Web Tìm Vần Đảo đột phá. Từ điển vần đảo. Từ điển vần rap. Lựa chọn hàng đầu cho rapper và nhạc six. Tại Vựa Tiếng Việt, bạn có thể tận hưởng trải nghiệm tìm vần nhờ AI.",
+      "Web Tìm Vần Đôi đột phá. Từ điển vần đảo. Từ điển vần rap. Lựa chọn hàng đầu cho rapper và nhạc six. Tại Vựa Tiếng Việt, bạn có thể tận hưởng trải nghiệm tìm vần nhờ AI.",
   },
   "noi-lai": {
     title: "Công Cụ Tìm Vần & Nói Lái | Vựa Tiếng Việt",
     description:
-      "Phát huy vẻ đẹp của từ ngữ với Web Tìm Vần & Vần Đảo tại Vựa Tiếng Việt. Tìm cách nói lái. Tìm Vần đôi, vần ba, vần đảo, nói lái, nói trại một cách chính xác và sáng tạo.",
+      "Phát huy vẻ đẹp của từ ngữ với Web Tìm Vần Đôi & Vần Đảo tại Vựa Tiếng Việt. Tìm cách nói lái. Tìm Vần đôi, vần ba, vần đảo, nói lái, nói trại một cách chính xác và sáng tạo.",
   },
 };
 
