@@ -34,8 +34,8 @@ export default function TypeTabMenu({
           className={clsx(
             "flex rounded-lg px-[1.25rem] py-[0.75rem] font-semibold transition-all duration-300",
             {
-              "bg-blue-100 text-blue-950": currentType == SearchType.VanXuoi,
-              "text-gray-600 hover:text-gray-950":
+              "bg-blue-100 text-blue-700": currentType == SearchType.VanXuoi,
+              "text-gray-600 hover:text-gray-900":
                 currentType != SearchType.VanXuoi,
             },
           )}
@@ -50,8 +50,8 @@ export default function TypeTabMenu({
           className={clsx(
             "flex rounded-lg px-[1.25rem] py-[0.75rem] font-semibold transition-all duration-300",
             {
-              "bg-blue-100 text-blue-950": currentType == SearchType.VanDao,
-              "text-gray-600 hover:text-gray-950":
+              "bg-blue-100 text-blue-700": currentType == SearchType.VanDao,
+              "text-gray-600 hover:text-gray-900":
                 currentType != SearchType.VanDao,
             },
           )}
@@ -66,8 +66,8 @@ export default function TypeTabMenu({
           className={clsx(
             "flex rounded-lg px-[1.25rem] py-[0.75rem] font-semibold transition-all duration-300",
             {
-              "bg-blue-100 text-blue-950": currentType == SearchType.NoiLai,
-              "text-gray-600 hover:text-gray-950":
+              "bg-blue-100 text-blue-700": currentType == SearchType.NoiLai,
+              "text-gray-600 hover:text-gray-900":
                 currentType != SearchType.NoiLai,
             },
           )}
