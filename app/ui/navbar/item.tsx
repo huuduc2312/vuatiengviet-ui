@@ -23,7 +23,7 @@ export default function Item({
         {
           "border-t-4 border-blue-500 text-blue-500 md:border-b-4 md:border-t-0":
             active,
-          "text-gray-400 hover:text-gray-700": !active,
+          "text-gray-600 hover:text-gray-950": !active,
         },
       )}>
       {icon}

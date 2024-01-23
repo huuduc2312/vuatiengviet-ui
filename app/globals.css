@@ -18,7 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: url("../public/bg-img.jpg");
+  background: url("../public/bg-img.webp");
   background-attachment: fixed;
   background-size: cover;
   min-height: 100dvh;
