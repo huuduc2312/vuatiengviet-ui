@@ -19,6 +19,12 @@ export default async function Page() {
       <div className="grid grid-cols-1 gap-4 pb-6 md:grid-cols-3 md:py-[2rem] md:pb-[10rem]">
         {blogs.map((blog: any, idx: number) => {
           const blogImg = blog.attributes.image;
+          const img =
+            blogImg.data.attributes.formats.large ||
+            blogImg.data.attributes.formats.medium ||
+            blogImg.data.attributes.formats.small ||
+            blogImg.data.attributes.formats.thumbnail ||
+            null;
 
           return (
             <Link
@@ -26,9 +32,9 @@ export default async function Page() {
               key={idx}
               className="flex flex-col justify-between gap-5 rounded-2xl border bg-white p-6">
               <Image
-                src={`${cmsHost}${blogImg.data.attributes.formats.small.url}`}
-                height={blogImg.data.attributes.formats.small.height}
-                width={blogImg.data.attributes.formats.small.width}
+                src={`${cmsHost}${img.url}`}
+                height={img.height}
+                width={img.width}
                 sizes="100vw"
                 className="h-auto w-full rounded-lg"
                 alt={blogImg.data.alternativeText}
