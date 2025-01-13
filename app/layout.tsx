@@ -12,7 +12,8 @@ const font = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Tìm Vần & Vần Đảo | Vần Ba, Đôi, Đơn | Vựa Tiếng Việt - Công Cụ Sáng Tạo Vần",
+  title:
+    "Tìm Vần & Vần Đảo | Vần Ba, Đôi, Đơn | Vựa Tiếng Việt - Công Cụ Sáng Tạo Vần",
   description:
     "Khám phá công cụ Tìm Vần & Vần Đảo trực tuyến tại Vựa Tiếng Việt! Tìm Vần với vần đôi, vần ba, vần đơn một cách dễ dàng. Tối ưu hóa sáng tạo trong viết rap, làm thơ, và nhạc với AI. Hỗ trợ tìm vần online, nâng cao nghệ thuật chơi chữ và biến ngôn từ thành nghệ thuật.",
   keywords: [
@@ -63,10 +64,13 @@ export default function RootLayout({
             gtag('config', 'G-NK9CVND59D');
           `}
         </Script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        />
       </head>
       <body className={`${font.className} antialiased`}>
-        <div className="flex h-[100dvh] flex-col overflow-y-auto">
+        <div className="flex h-full flex-col overflow-y-auto">
           <Navbar />
           {/* <SocialMediaButtons /> */}
           <main className="h-full overflow-y-auto">{children}</main>

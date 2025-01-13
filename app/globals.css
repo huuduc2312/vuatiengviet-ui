@@ -21,7 +21,7 @@ body {
   background: url("../public/bg-img.webp");
   background-attachment: fixed;
   background-size: cover;
-  min-height: 100dvh;
+  height: calc(100dvh - 154px);
 }
 
 /* Bottom Tooltip Styles */
@@ -42,20 +42,23 @@ body {
   opacity: 0.7;
   z-index: 9999;
   background: #333;
-  color: #E086D3;
+  color: #e086d3;
   padding: 10px;
   border-radius: 9px;
   font-size: 16px;
   box-shadow: 0 0 3px rgba(56, 54, 54, 0.86);
-  
+
   /* Positioning */
   position: absolute;
   top: 115%; /* Adjust this value if needed */
   left: -50%;
   /* transform: translateX(-50%) translateY(10px); */
-  
+
   /* Transition */
-  transition: visibility 0.3s linear, opacity 0.3s linear, transform 0.3s linear;
+  transition:
+    visibility 0.3s linear,
+    opacity 0.3s linear,
+    transform 0.3s linear;
 }
 
 /* Tooltip arrow */
