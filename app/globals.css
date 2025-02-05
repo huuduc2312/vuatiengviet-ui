@@ -21,7 +21,7 @@ body {
   background: url("../public/bg-img.webp");
   background-attachment: fixed;
   background-size: cover;
-  height: calc(100dvh - 154px);
+  min-height: 100dvh;
 }
 
 /* Bottom Tooltip Styles */

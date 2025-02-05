@@ -70,7 +70,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${font.className} antialiased`}>
-        <div className="flex h-full flex-col overflow-y-auto">
+        <div className="flex h-[100dvh] flex-col overflow-y-auto">
           <Navbar />
           {/* <SocialMediaButtons /> */}
           <main className="h-full overflow-y-auto">{children}</main>
